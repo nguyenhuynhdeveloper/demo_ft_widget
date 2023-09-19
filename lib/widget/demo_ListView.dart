@@ -43,17 +43,16 @@ Widget ItemBuilder(item) {
     selectedColor: Colors.amber,
     iconColor: Colors.pink,
 
-    textColor: Colors.blue,    // Màu của chữ 
-    tileColor: Colors.green,    // Màu của background title
+    textColor: Colors.blue, // Màu của chữ
+    tileColor: Colors.green, // Màu của background title
   );
 }
 
-
 //ListView.builder({
-// Key? key, 
+// Key? key,
 // Axis scrollDirection = Axis.vertical,
-// bool reverse = false, ScrollController? 
-// controller, bool? primary, 
+// bool reverse = false, ScrollController?
+// controller, bool? primary,
 // ScrollPhysics? physics,
 // bool shrinkWrap = false,
 // EdgeInsetsGeometry? padding,

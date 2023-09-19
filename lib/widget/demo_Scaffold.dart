@@ -36,7 +36,10 @@ class _DemoScaffoldState extends State<DemoScaffold> {
 
             elevation: 1, // Cao độ của AppBar
 
-            leading:IconButton(icon: Icon(Icons.arrow_back), onPressed: () {  },),
+            leading: IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {},
+            ),
             //  Container(
             //   height: 20,
             //   width: 20,
@@ -58,7 +61,8 @@ class _DemoScaffoldState extends State<DemoScaffold> {
                 icon: const Icon(Icons.add_alert),
                 tooltip: 'Show Snackbar',
                 onPressed: () {
-                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('This is a snackbar')));
+                  ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('This is a snackbar')));
                 },
               ),
               IconButton(
@@ -99,98 +103,103 @@ class _DemoScaffoldState extends State<DemoScaffold> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  ListTile(   // Thực ra 1 widget để vẽ ra 1 dòng : Mà có thể ấn vào 
-                    leading: Icon(Icons.add_card),   // Đầu dòng 
-                    title: Text('Demo Container'),   // Cuối dòng
+                  ListTile(
+                    // Thực ra 1 widget để vẽ ra 1 dòng : Mà có thể ấn vào
+                    leading: Icon(Icons.add_card), // Đầu dòng
+                    title: Text('Demo Container'), // Cuối dòng
                     onTap: () {
-                      Navigator.pushNamed(context, "/Container"); // Chuyển sang màn hình DemoContainer
+                      Navigator.pushNamed(context,
+                          "/Container"); // Chuyển sang màn hình DemoContainer
                     },
                   ),
                   ListTile(
                     leading: Icon(Icons.add_card),
                     title: Text('Demo Image'),
                     onTap: () {
-                      Navigator.pushNamed(context, "/Image"); // Chuyển sang màn hình DemoImage
+                      Navigator.pushNamed(
+                          context, "/Image"); // Chuyển sang màn hình DemoImage
                     },
                   ),
                   ListTile(
                     leading: Icon(Icons.add_card),
                     title: Text('Demo Column'),
                     onTap: () {
-                      Navigator.pushNamed(context, "/Column"); // Chuyển sang màn hình DemoImage
+                      Navigator.pushNamed(
+                          context, "/Column"); // Chuyển sang màn hình DemoImage
                     },
                   ),
-            
                   ListTile(
                     leading: Icon(Icons.add_card),
                     title: Text('Demo Row'),
-                      onTap: () {
-                      Navigator.pushNamed(context, "/Row"); // Chuyển sang màn hình DemoImage
+                    onTap: () {
+                      Navigator.pushNamed(
+                          context, "/Row"); // Chuyển sang màn hình DemoImage
                     },
                   ),
-            
-                     ListTile(
+                  ListTile(
                     leading: Icon(Icons.add_card),
                     title: Text('Demo Stack'),
-                      onTap: () {
-                      Navigator.pushNamed(context, "/Stack"); // Chuyển sang màn hình DemoImage
+                    onTap: () {
+                      Navigator.pushNamed(
+                          context, "/Stack"); // Chuyển sang màn hình DemoImage
                     },
                   ),
-            
-                     ListTile(
+                  ListTile(
                     leading: Icon(Icons.add_card),
                     title: Text('Demo ListView'),
-                      onTap: () {
-                      Navigator.pushNamed(context, "/ListView"); // Chuyển sang màn hình DemoImage
+                    onTap: () {
+                      Navigator.pushNamed(context,
+                          "/ListView"); // Chuyển sang màn hình DemoImage
                     },
                   ),
-            
-                     ListTile(
+                  ListTile(
                     leading: Icon(Icons.add_card),
                     title: Text('Demo TextField'),
-                      onTap: () {
-                      Navigator.pushNamed(context, "/TextField"); // Chuyển sang màn hình DemoImage
+                    onTap: () {
+                      Navigator.pushNamed(context,
+                          "/TextField"); // Chuyển sang màn hình DemoImage
                     },
                   ),
-            
-                       ListTile(
+                  ListTile(
                     leading: Icon(Icons.add_card),
                     title: Text('Demo GestureDetector'),
-                      onTap: () {
-                      Navigator.pushNamed(context, "/GestureDetector"); // Chuyển sang màn hình DemoImage
+                    onTap: () {
+                      Navigator.pushNamed(context,
+                          "/GestureDetector"); // Chuyển sang màn hình DemoImage
                     },
                   ),
-                            ListTile(
+                  ListTile(
                     leading: Icon(Icons.add_card),
                     title: Text('Demo BottomAppBar'),
-                      onTap: () {
-                      Navigator.pushNamed(context, "/BottomAppBar"); // Chuyển sang màn hình DemoImage
+                    onTap: () {
+                      Navigator.pushNamed(context,
+                          "/BottomAppBar"); // Chuyển sang màn hình DemoImage
                     },
                   ),
-                     ListTile(
+                  ListTile(
                     leading: Icon(Icons.add_card),
                     title: Text('Demo AlertDialog'),
-                      onTap: () {
-                      Navigator.pushNamed(context, "/AlertDialog"); // Chuyển sang màn hình DemoImage
+                    onTap: () {
+                      Navigator.pushNamed(context,
+                          "/AlertDialog"); // Chuyển sang màn hình DemoImage
                     },
                   ),
-
-            ListTile(
+                  ListTile(
                     leading: Icon(Icons.add_card),
                     title: Text('Demo showModalBottomSheet'),
-                      onTap: () {
-                      Navigator.pushNamed(context, "/showModalBottomSheet"); // Chuyển sang màn hình DemoImage
-                    },
-                  ),  
-
-                    ListTile(
-                    leading: Icon(Icons.add_card),
-                    title: Text('Demo DropDownButton2'),
-                      onTap: () {
-                      Navigator.pushNamed(context, "/DropDownButton2"); // Chuyển sang màn hình DropDownButton2
+                    onTap: () {
+                      Navigator.pushNamed(context,
+                          "/showModalBottomSheet"); // Chuyển sang màn hình DemoImage
                     },
                   ),
-                  
+                  ListTile(
+                    leading: Icon(Icons.add_card),
+                    title: Text('Demo DropDownButton2'),
+                    onTap: () {
+                      Navigator.pushNamed(context,
+                          "/DropDownButton2"); // Chuyển sang màn hình DropDownButton2
+                    },
+                  ),
                 ],
               ),
             ),
@@ -199,9 +208,11 @@ class _DemoScaffoldState extends State<DemoScaffold> {
           //--------BottomAppBar
           bottomNavigationBar: BottomAppBar(
             color: Colors.amber,
-            shape: const CircularNotchedRectangle(), //Phần notch được tạo cho FloatingActionButton : Bo tròn né FloatingActionButton
+            shape:
+                const CircularNotchedRectangle(), //Phần notch được tạo cho FloatingActionButton : Bo tròn né FloatingActionButton
 
-            clipBehavior: Clip.hardEdge, // Nội dung sẽ được cắt bớt (hoặc không) theo tùy chọn này.
+            clipBehavior: Clip
+                .hardEdge, // Nội dung sẽ được cắt bớt (hoặc không) theo tùy chọn này.
 
             // child  : Có thể vẽ bất kỳ widget nào đây để hiển thị cho BottomAppBar : Không bị giới hạn như BottomNavigationBar
             // child: IconTheme(
@@ -290,9 +301,38 @@ class _DemoScaffoldState extends State<DemoScaffold> {
           // Quyết định vị trí của floatingActionButton
           // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat  // ở giữa phía trên BottomBarApp
           // floatingActionButtonLocation: FloatingActionButtonLocation.centerTop     // Ở giư trên - dưới AppBar
-          floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked // Ở giữa nằm đè phía trên BottomBarApp
+          floatingActionButtonLocation: FloatingActionButtonLocation
+              .centerDocked // Ở giữa nằm đè phía trên BottomBarApp
 
           )),
     );
   }
 }
+
+//Scaffold({
+//   Key? key,
+//   PreferredSizeWidget? appBar,
+//   Widget? body,
+//   Widget? bottomNavigationBar,
+//   Widget? floatingActionButton,
+
+//   FloatingActionButtonLocation? floatingActionButtonLocation,
+//   FloatingActionButtonAnimator? floatingActionButtonAnimator,
+//   List<Widget>? persistentFooterButtons,
+//   Widget? drawer,
+//   void Function(bool)? onDrawerChanged,
+//   Widget? endDrawer,
+//   void Function(bool)? onEndDrawerChanged,
+//   Widget? bottomSheet,
+//   Color? backgroundColor,
+//   bool? resizeToAvoidBottomInset,
+//   bool primary = true,
+//   DragStartBehavior drawerDragStartBehavior = DragStartBehavior.start,
+//   bool extendBody = false,
+//   bool extendBodyBehindAppBar = false,
+//   Color? drawerScrimColor,
+//   double? drawerEdgeDragWidth,
+//   bool drawerEnableOpenDragGesture = true,
+//   bool endDrawerEnableOpenDragGesture = true,
+//   String? restorationId,
+// })

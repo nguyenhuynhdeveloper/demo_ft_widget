@@ -12,8 +12,6 @@ class PushNamed extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -21,7 +19,7 @@ class PushNamed extends StatelessWidget {
           // fontFamily: Fonts.regular
           ),
       routes: routesList,
-      
+
       initialRoute: //Danh sách các màn hình mà có thể chuyển Navigator sang
           "/", // Màn hình mặc định khi khởi tạo app là chạy lên
     );
@@ -60,13 +58,8 @@ class _HomePageState extends State<HomePage> {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(
-                  context,
-                  "/Screen1",
-                  arguments: {'argumentRoute' : "ArgumentRouteContent"}
-                );
-
-              
+                Navigator.pushNamed(context, "/Screen1",
+                    arguments: {'argumentRoute': "ArgumentRouteContent"});
               },
               style: ElevatedButton.styleFrom(
                 primary: Colors.amber,
@@ -83,7 +76,10 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-              Text("xinchafo", style: TextStyle(color: Colors.amber),),
+            Text(
+              "xinchafo",
+              style: TextStyle(color: Colors.amber),
+            ),
           ],
         ),
       ),

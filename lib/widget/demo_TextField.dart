@@ -8,7 +8,8 @@ class DemoTextField extends StatefulWidget {
   const DemoTextField({Key? key}) : super(key: key);
 
   @override
-  State<DemoTextField> createState() => _DemoTextFieldState(); // Khi khai báo biến _abc: thì biến này là private : Biến không công khai
+  State<DemoTextField> createState() =>
+      _DemoTextFieldState(); // Khi khai báo biến _abc: thì biến này là private : Biến không công khai
 }
 
 class _DemoTextFieldState extends State<DemoTextField> {
@@ -31,7 +32,8 @@ class _DemoTextFieldState extends State<DemoTextField> {
               width: double.infinity,
               child: Center(
                   child: (TextField(
-                controller: emailEditingController, // Nói rằng khối điều khiển cái này là emailEditingController
+                controller:
+                    emailEditingController, // Nói rằng khối điều khiển cái này là emailEditingController
                 onChanged: (t) {
                   // t : là nhữngh cái gì mà ng dùng nó ghi vào
                   setState(() {
@@ -42,7 +44,8 @@ class _DemoTextFieldState extends State<DemoTextField> {
                   });
                 },
                 decoration: const InputDecoration(
-                    border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(20))),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20))),
                     labelText: 'Enter your name',
                     hintText: "Nhập email của bạn"),
               ))),
@@ -58,7 +61,7 @@ class _DemoTextFieldState extends State<DemoTextField> {
             Container(
                 margin: EdgeInsets.only(top: 100),
                 height: 100,
-                color: isOn  == true ? Colors.amber : Colors.red,
+                color: isOn == true ? Colors.amber : Colors.red,
                 child: InkWell(
                   child: Text("Bấm để xoá ô nhập dữ liệu "),
                   onTap: () {
@@ -69,17 +72,15 @@ class _DemoTextFieldState extends State<DemoTextField> {
                     });
                   },
                 )),
-
             GestureDetector(
-              onTap: () =>{ 
+              onTap: () => {
                 setState(() {
                   isOn = !isOn;
                 }),
                 print("vừa bấm vào GestureDetector")
-                },
-              child: Container(
-                child: const Text('tắt bật')),
-                )
+              },
+              child: Container(child: const Text('tắt bật')),
+            )
           ],
         ),
       ),

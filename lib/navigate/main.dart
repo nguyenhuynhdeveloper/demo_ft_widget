@@ -18,8 +18,10 @@ class MyApp extends StatelessWidget {
       ),
       // home: const SecondPage(),
 
-      routes: routes, // Khai báo tất cả tuyến đường màn hình mà app có thể chạy qua
-      initialRoute: '/MyHomePage', //Khai báo tuyến đường đầu tiên mà chạy qua---> màn hình đầu tiên được hiển thị
+      routes:
+          routes, // Khai báo tất cả tuyến đường màn hình mà app có thể chạy qua
+      initialRoute:
+          '/MyHomePage', //Khai báo tuyến đường đầu tiên mà chạy qua---> màn hình đầu tiên được hiển thị
     );
   }
 }
@@ -27,7 +29,6 @@ class MyApp extends StatelessWidget {
 Map<String, WidgetBuilder> get routes => {
       "/MyHomePage": (context) => MyHomePage(),
       "/SecondPage": (context) => SecondPage(),
-     
     };
 
 // Map <String,int> a_Map = {"a" : 2   };
@@ -49,20 +50,21 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Container(
         color: Colors.pink,
         child: Center(
-          child: 
-          // ElevatedButton(   // là 1 button có cao độ -- tạo nhanh ra 1 button 
-          //     onPressed: () {
-          //       // Navigator.pushNamed(context, "/SecondPage");
-          //       Navigator.of(context).pushNamed("/SecondPage");
-          //     },
-          //     child: Text("Sang màn 2")),
+            child:
+                // ElevatedButton(   // là 1 button có cao độ -- tạo nhanh ra 1 button
+                //     onPressed: () {
+                //       // Navigator.pushNamed(context, "/SecondPage");
+                //       Navigator.of(context).pushNamed("/SecondPage");
+                //     },
+                //     child: Text("Sang màn 2")),
 
-          GestureDetector(   // Đa số 80% dùng cái này vì nó có thể tuỳ biến rất nhiều màu mè, hình thức khác nhau  : Còn các button mặc định khác thì nó chỉ có 1 hình thức cố định thôi 
-            onTap: () {
-              Navigator.of(context).pushNamed("/SecondPage");
-            },
-            child: Container(child: Text("Nút bấm với GestureDetector")),)
-        ),
+                GestureDetector(
+          // Đa số 80% dùng cái này vì nó có thể tuỳ biến rất nhiều màu mè, hình thức khác nhau  : Còn các button mặc định khác thì nó chỉ có 1 hình thức cố định thôi
+          onTap: () {
+            Navigator.of(context).pushNamed("/SecondPage");
+          },
+          child: Container(child: Text("Nút bấm với GestureDetector")),
+        )),
       ),
     );
   }

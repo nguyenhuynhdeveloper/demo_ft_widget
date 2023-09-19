@@ -2,8 +2,7 @@ import 'package:demo_ft_widget/navigate/pushNamed/pushNamed.dart';
 import 'package:flutter/material.dart';
 
 class Screen1 extends StatefulWidget {
-  const Screen1({Key? key }) : super(key: key);
-  
+  const Screen1({Key? key}) : super(key: key);
 
   @override
   State<Screen1> createState() => _Screen1State();
@@ -13,9 +12,10 @@ class _Screen1State extends State<Screen1> {
   String? argumentRoute;
   @override
   Widget build(BuildContext context) {
- Map<String, String>? arguments = ModalRoute.of(context)?.settings.arguments as Map<String, String>?;
-  
-     argumentRoute = arguments!["argumentRoute"];
+    Map<String, String>? arguments =
+        ModalRoute.of(context)?.settings.arguments as Map<String, String>?;
+
+    argumentRoute = arguments!["argumentRoute"];
 
     return Scaffold(
       //Full màn hình : 1, appBar , 2 body
@@ -27,7 +27,8 @@ class _Screen1State extends State<Screen1> {
         // widget căn giữa ra màn hình (hoặc giữa thằng widget cha của nó)
         child: Column(
           //Widget mà các children bên trong xếp theo hàng dọc
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Column Widget  : mainAxisAlignment  là trục dọc
+          mainAxisAlignment: MainAxisAlignment
+              .spaceEvenly, // Column Widget  : mainAxisAlignment  là trục dọc
           children: [
             SizedBox(
               width: 150,

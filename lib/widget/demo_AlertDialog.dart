@@ -31,8 +31,6 @@ class DialogExample extends StatelessWidget {
   }
 }
 
-
-
 Widget ExampleAlertDialog(context) {
   return AlertDialog(
     title: const Text('AlertDialog Title'),
@@ -46,7 +44,7 @@ Widget ExampleAlertDialog(context) {
         onPressed: () => Navigator.pop(context, 'OK'),
         child: const Text('OK'),
       ),
-        TextButton(
+      TextButton(
         onPressed: () => Navigator.pop(context, 'OK'),
         child: const Text('OK'),
       ),

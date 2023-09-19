@@ -3,7 +3,7 @@ import 'package:demo_ft_widget/navigate/materialPageRoute/push_pop.dart';
 import 'package:flutter/material.dart';
 
 class Screen1 extends StatefulWidget {
-   final String? argumentRoute ;
+  final String? argumentRoute;
   const Screen1({Key? key, this.argumentRoute}) : super(key: key);
 
   @override
@@ -23,7 +23,8 @@ class _Screen1State extends State<Screen1> {
         // widget căn giữa ra màn hình (hoặc giữa thằng widget cha của nó)
         child: Column(
           //Widget mà các children bên trong xếp theo hàng dọc
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Column Widget  : mainAxisAlignment  là trục dọc
+          mainAxisAlignment: MainAxisAlignment
+              .spaceEvenly, // Column Widget  : mainAxisAlignment  là trục dọc
           children: [
             SizedBox(
               width: 150,
@@ -36,7 +37,7 @@ class _Screen1State extends State<Screen1> {
               onPressed: () {
                 // Cách để trở về màn trước
                 // Navigator.of(context).pop(false);
-                 AppRouter.push( const HomePage());
+                AppRouter.push(const HomePage());
               },
               style: ElevatedButton.styleFrom(
                 primary: Colors.amber,
@@ -47,24 +48,29 @@ class _Screen1State extends State<Screen1> {
               ),
               child: const Text(
                 "Sang màn 2",
-                style:  TextStyle(
+                style: TextStyle(
                   fontSize: 24,
                   color: Colors.white,
                 ),
               ),
             ),
             Container(
-              height: 200, width: 200, color: Colors.black,
+              height: 200,
+              width: 200,
+              color: Colors.black,
               child: InkWell(
-                child: Container(height: 100, width: 100, color: Colors.amber,
-                
-                 child: Text(widget.argumentRoute!),),
-                      onTap: () {
-              setState(() {
-                // sideLength == 50 ? sideLength = 100 : sideLength = 50;
-              });
-                      },
-                    ),
+                child: Container(
+                  height: 100,
+                  width: 100,
+                  color: Colors.amber,
+                  child: Text(widget.argumentRoute!),
+                ),
+                onTap: () {
+                  setState(() {
+                    // sideLength == 50 ? sideLength = 100 : sideLength = 50;
+                  });
+                },
+              ),
             ),
           ],
         ),

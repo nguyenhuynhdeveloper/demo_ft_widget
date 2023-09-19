@@ -2,9 +2,7 @@
 //BottomNavigationBar thường được đặt trong 1 Scaffold và sẽ xuất hiện ở dưới cũng của Scaffold
 // Nếu muốn thoả sức sáng tạo -- custom đẹp hơn thì sử dụng BottomAppBar
 
-
 import 'package:flutter/material.dart';
-
 
 class DemoBottomNavigationBar extends StatelessWidget {
   const DemoBottomNavigationBar({super.key});
@@ -64,10 +62,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-            backgroundColor: Colors.amber
-          ),
+              icon: Icon(Icons.home),
+              label: 'Home',
+              backgroundColor: Colors.amber),
           BottomNavigationBarItem(
             icon: Icon(Icons.business),
             label: 'Business',
@@ -77,30 +74,22 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             label: 'School',
           ),
         ],
-
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
         onTap: _onItemTapped,
-         selectedIconTheme: const IconThemeData (
-      color: Colors.red,
-      opacity: 1.0,
-      size: 45
-  ),
-  unselectedIconTheme:const IconThemeData (
-      color: Colors.black45,
-      opacity: 0.5,
-      size: 25
-  ),
-
-  selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
-   unselectedLabelStyle: TextStyle(fontStyle: FontStyle.italic),
-   showSelectedLabels: false,
-   showUnselectedLabels: false,
-     selectedFontSize: 20,
-       unselectedFontSize: 15,
-        backgroundColor : Colors.greenAccent,
-         unselectedItemColor: Colors.cyan,
-       
+        selectedIconTheme:
+            const IconThemeData(color: Colors.red, opacity: 1.0, size: 45),
+        unselectedIconTheme:
+            const IconThemeData(color: Colors.black45, opacity: 0.5, size: 25),
+        selectedLabelStyle:
+            TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+        unselectedLabelStyle: TextStyle(fontStyle: FontStyle.italic),
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        selectedFontSize: 20,
+        unselectedFontSize: 15,
+        backgroundColor: Colors.greenAccent,
+        unselectedItemColor: Colors.cyan,
       ),
     );
   }
@@ -113,16 +102,16 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
 //selectedIconTheme được sử dụng để thiết lập kích thước (size), mầu sắc (color) và độ mờ đục (opacity) cho biểu tượng của BottomNavigationBarItem đang được chọn.
 //unselectedIconTheme được sử dụng để thiết lập kích thước (size), mầu sắc (color) và độ mờ đục (opacity) cho biểu tượng của các BottomNavigationBarItem không được chọn.
- // selectedLabelStyle được sử dụng để chỉ định kiểu dáng văn bản trên nhãn của BottomNavigationBarItem đang được chọn.
- //unselectedLabelStyle được sử dụng để chỉ định kiểu dáng văn bản trên nhãn của các BottomNavigationBarItem không được chọn.
- //showSelectedLabels được sử dụng để cho phép hoặc không cho phép các nhãn (label) hiển thị trên BottomNavigationBarItem đang được chọn. Giá trị mặc định của nó là true.
- //showUnselectedLabels được sử dụng để cho phép hoặc không cho phép các nhãn (label) hiển thị trên BottomNavigationBarItem không được chọn. Giá trị mặc định của nó là true.
-  //selectedFontSize được sử dụng để chỉ định kích thước phông chữ trên BottomNavigationBarItem đang được chọn. Giá trị mặc định của nó là 14.
-  // selectedFontSize được sử dụng để chỉ định kích thước phông chữ trên các BottomNavigationBarItem không được chọn. Giá trị mặc định của nó là 12.
-  //backgroundColor được sử dụng để chỉ định mầu nền cho BottomNavigationBar.
-  //selectedItemColor được sử dụng để chỉ định mầu sắc cho BottomNavigationBarItem đang được chọn, nó có tác dụng với biểu tượng và nhãn.
-  //Chú ý: Property selectedItemColor giống với fixedColor, bạn chỉ được phép sử dụng một trong hai property này.
-  //unselectedItemColor được sử dụng để chỉ định mầu sắc cho các BottomNavigationBarItem không được chọn, nó có tác dụng với biểu tượng và nhãn.
+// selectedLabelStyle được sử dụng để chỉ định kiểu dáng văn bản trên nhãn của BottomNavigationBarItem đang được chọn.
+//unselectedLabelStyle được sử dụng để chỉ định kiểu dáng văn bản trên nhãn của các BottomNavigationBarItem không được chọn.
+//showSelectedLabels được sử dụng để cho phép hoặc không cho phép các nhãn (label) hiển thị trên BottomNavigationBarItem đang được chọn. Giá trị mặc định của nó là true.
+//showUnselectedLabels được sử dụng để cho phép hoặc không cho phép các nhãn (label) hiển thị trên BottomNavigationBarItem không được chọn. Giá trị mặc định của nó là true.
+//selectedFontSize được sử dụng để chỉ định kích thước phông chữ trên BottomNavigationBarItem đang được chọn. Giá trị mặc định của nó là 14.
+// selectedFontSize được sử dụng để chỉ định kích thước phông chữ trên các BottomNavigationBarItem không được chọn. Giá trị mặc định của nó là 12.
+//backgroundColor được sử dụng để chỉ định mầu nền cho BottomNavigationBar.
+//selectedItemColor được sử dụng để chỉ định mầu sắc cho BottomNavigationBarItem đang được chọn, nó có tác dụng với biểu tượng và nhãn.
+//Chú ý: Property selectedItemColor giống với fixedColor, bạn chỉ được phép sử dụng một trong hai property này.
+//unselectedItemColor được sử dụng để chỉ định mầu sắc cho các BottomNavigationBarItem không được chọn, nó có tác dụng với biểu tượng và nhãn.
 
-  // fixedColor giống với property selectedItemColor, chúng được sử dụng để chỉ định mầu sắc cho BottomNavigationBarItem đang được chọn, nó có tác dụng với biểu tượng và nhãn. 
+// fixedColor giống với property selectedItemColor, chúng được sử dụng để chỉ định mầu sắc cho BottomNavigationBarItem đang được chọn, nó có tác dụng với biểu tượng và nhãn.
 //Chú ý: fixedColor là một cái tên cũ, nó còn tồn tại vì mục đích tương thích ngược (backwards compatibility). Bạn nên sử dụng property selectedItemColor, và không được phép sử dụng đồng thời cả hai

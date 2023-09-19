@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());    // Tạo 1 đối tượgn MyApp()
+  runApp(const MyApp()); // Tạo 1 đối tượgn MyApp()
 }
 
 class MyApp extends StatelessWidget {
@@ -27,13 +27,14 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
       ),
       // home: const MyHomePage(), // Đây chính là cái ruột App :  MyHomePage : Lại là 1 widget : Đây chính là tạo ra đối tượng MyHomePage từ class MyHomePage
-      home:  const MyHomePage(title: 'Hello'), // Đây chính là cái ruột App :  MyHomePage : Lại là 1 widget : Đây chính là tạo ra đối tượng MyHomePage từ class MyHomePage
+      home: const MyHomePage(
+          title:
+              'Hello'), // Đây chính là cái ruột App :  MyHomePage : Lại là 1 widget : Đây chính là tạo ra đối tượng MyHomePage từ class MyHomePage
     );
   }
 }
 
-
-// Trong OOP Lập trình hướng đối tượng 
+// Trong OOP Lập trình hướng đối tượng
 /**
  Tất cả mọi thứ trong code nó đều là 
  đối tượng , con cho con mèo -- 
@@ -52,8 +53,8 @@ Widget : từng 1 viên gạch , xếp vào vào nhau - hàng gạch (widget) -m
 
  */
 
-// // Tạo ra 1 widget : dạng class  ----> Cả cái cụm này chỉ là đoạn  khai báo tạo ra 1 cái class thôi 
-// class view MyhomePage : dạng StatelessWidget 
+// // Tạo ra 1 widget : dạng class  ----> Cả cái cụm này chỉ là đoạn  khai báo tạo ra 1 cái class thôi
+// class view MyhomePage : dạng StatelessWidget
 // class MyHomePage extends StatelessWidget {
 //   const MyHomePage({Key? key}) : super(key: key);
 
@@ -68,7 +69,7 @@ Widget : từng 1 viên gạch , xếp vào vào nhau - hàng gạch (widget) -m
 //   }
 // }
 
-// class view MyhomePage : dạng StatefulWidget 
+// class view MyhomePage : dạng StatefulWidget
 // Đây chính là cách tạo ra 1 widget : MyHomePage : nó là 1 widget -- nó đầy đủ 1 màn hình
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -154,7 +155,7 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
-         // Dấu phẩy ở cuối này làm cho định dạng tự động đẹp hơn cho các phương thức xây dựng.
+      // Dấu phẩy ở cuối này làm cho định dạng tự động đẹp hơn cho các phương thức xây dựng.
     );
   }
 }

@@ -18,8 +18,6 @@ class _DemoStackState extends State<DemoStack> {
           height: double.infinity,
           width: double.infinity,
           color: Color.fromARGB(255, 70, 147, 77),
-
-
           child: Stack(
             // Stack là widget cho phép các widget bên trong chồng đè nên nhau , cái viết trước thì nằm ở dưới, --> cái viết đầu tiên thì ở dưới cùng
             alignment: AlignmentDirectional.topStart,
@@ -38,10 +36,19 @@ class _DemoStackState extends State<DemoStack> {
                 child: Text("xin chào"),
               ),
 
-
-               // Cái widget đầu tiên lúc nào cũng là cái widget nền
-              Positioned(top: 10, left: 10, child: Container(height: 50, width: 50, color: Colors.blue)), // Positioned : Quyết định vị trí của nó so với Stack : So với thằng widget đầu tiên
-              Positioned(top: 20, left: 20, child: Container(height: 50, width: 50, color: Colors.red)),
+              // Cái widget đầu tiên lúc nào cũng là cái widget nền
+              Positioned(
+                  top: 10,
+                  left: 10,
+                  child: Container(
+                      height: 50,
+                      width: 50,
+                      color: Colors
+                          .blue)), // Positioned : Quyết định vị trí của nó so với Stack : So với thằng widget đầu tiên
+              Positioned(
+                  top: 20,
+                  left: 20,
+                  child: Container(height: 50, width: 50, color: Colors.red)),
               Text("xin chào"),
             ],
           )),

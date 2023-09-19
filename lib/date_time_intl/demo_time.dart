@@ -1,12 +1,11 @@
 // //  17/10/2022   https://api.flutter.dev/flutter/dart-core/DateTime-class.html
 // //  dart:core -> DateTime class
 
-// // yyyy-MM-ddTHH:mm:ss.mmmuuuZ for UTC time, 
+// // yyyy-MM-ddTHH:mm:ss.mmmuuuZ for UTC time,
 // // yyyy-MM-ddTHH:mm:ss.mmmuuu (no trailing "Z") for local/non-UTC time
 
-
 // // TẠO ĐỐI TƯỢNG DateTime
-// // Tạo đối tượng DateTime bằng cách sử dụng một trong các hàm tạo hoặc bằng cách phân tích cú pháp một String được định dạng chính xác, 
+// // Tạo đối tượng DateTime bằng cách sử dụng một trong các hàm tạo hoặc bằng cách phân tích cú pháp một String được định dạng chính xác,
 // //tuân thủ tập hợp con của ISO 8601. Lưu ý: giờ được chỉ định trong khoảng từ 0 đến 23, như trong đồng hồ 24 giờ.
 
 // final now = DateTime.now();
@@ -22,14 +21,8 @@
 // print(secondDateTime.hour); // 20
 // print(secondDateTime.minute); // 18
 
-
-
-
-
-
-
-// // LÀM VIỆC VỚI MÚI GIỜ UTC 
-// Đối tượng DateTime sẽ được nằm trong múi giờ địa phương trừ khi được tạo rõ ràng trong múi giờ UTC. 
+// // LÀM VIỆC VỚI MÚI GIỜ UTC
+// Đối tượng DateTime sẽ được nằm trong múi giờ địa phương trừ khi được tạo rõ ràng trong múi giờ UTC.
 // Sử dụng isUtc để xác định xem một đối tượng DateTime có dựa trên UTC hay không.
 
 // final dDay = DateTime.utc(1944, 6, 6);   // Tạo 1 đối tượng DateTime trên múi giờ 0(UTC)
@@ -47,12 +40,10 @@
 // final utcFromLocal = localDay.toUtc(); // 1944-06-06 00:00:00.000Z
 // print(utcFromLocal.isUtc); // true
 
-
 // // LẤY TÊN VIẾT TẮT MÚI GIỜ CHO 1 ĐỐI TƯỢNG DateTime
 // Sử dụng timeZoneName để lấy tên viết tắt của múi giờ cho đối tượng DateTime.
 // print(dDay.timeZoneName); // UTC
 // print(localDay.timeZoneName); // e.g. EET
-
 
 // Để tìm sự khác biệt giữa UTC và múi giờ của một đối tượng DateTime, hãy gọi timeZoneOffset
 
@@ -62,23 +53,20 @@
 // // SO SÁNH @ DateTime
 // Lớp DateTime chứa các phương thức để so sánh DateTimes theo thứ tự thời gian, chẳng hạn như isAfter, isBefore và isAtSameMomentAs
 
-
 // print(firstDateTime.isAfter(secondDateTime)); // true   seconDateTime nằm sau firstDateTime
 // print(firstDateTime.isBefore(secondDateTime)); // false
 // print(dDay.isAtSameMomentAs(localDay)); // true
-
 
 // // CỘNG TRỪ DateTime
 // Tạo ra 1 đối tượng DateTime có sự chênh lệch về thời gian với 1 đối tượng DateTime khác bằng cách sử dụng Duration
 
 // final now = DateTime.now();
-// final later = now.add(const Duration(hours: 36));   // DateTime sau cộng thêm 36h 
-// final before = now.subtract(const Duration(hours: 36));   // DateTime sau cộng thêm 36h 
+// final later = now.add(const Duration(hours: 36));   // DateTime sau cộng thêm 36h
+// final before = now.subtract(const Duration(hours: 36));   // DateTime sau cộng thêm 36h
 
 // //SỰ CHÊNH LỆCH GIỮA 2 DateTime
 // final difference = firstDateTime.difference(secondDateTime);
-// print(difference.inDays); // 7416  sự khác biệt là 7416 ngày 
-
+// print(difference.inDays); // 7416  sự khác biệt là 7416 ngày
 
 // //Constructors
 
@@ -97,26 +85,21 @@
 // DateTime.fromMillisecondsSinceEpoch(int millisecondsSinceEpoch, {bool isUtc = false})
 // //Tạo một phiên bản DateTime mới với mili giâySinceEpoch đã cho.
 
-// ######  Properties 
+// ######  Properties
 // now.day   //Trả ra giá trị ngày [1..31]
 // hour // [0..23]
-
 
 // day → int
 // The day of the month [1..31].
 
-
 // hashCode → int
 // The hash code for this object.
-
 
 // hour → int
 // The hour of the day, expressed as in a 24-hour clock [0..23].
 
-
 // isUtc → bool
 // True if this DateTime is set to UTC time.
-
 
 // microsecond → int
 // The microsecond [0...999].
@@ -139,18 +122,14 @@
 // runtimeType → Type
 // A representation of the runtime type of the object.
 
-
 // second → int
 // The second [0...59].
-
 
 // timeZoneName → String
 // The time zone name.
 
-
 // timeZoneOffset → Duration
 // The time zone offset, which is the difference between local time and UTC.
-
 
 // weekday → int
 // The day of the week monday..sunday.
@@ -158,12 +137,9 @@
 // year → int
 // The year.
 
-
-
-// ###### Method 
+// ###### Method
 // add(Duration duration) → DateTime
 // //Trả ra 1 DateTime với thời lượng thời gian được thêm vào
-
 
 // subtract(Duration duration) → DateTime
 // //Trả ra 1 DateTime với thời lượng thời gian được trừ đi
@@ -200,10 +176,8 @@
 // parse(String formattedString) → DateTime
 // Tạo một phiên bản DateTime mới dựa trên formattedString.
 
-
 // tryParse(String formattedString) → DateTime?
 // Tạo một phiên bản DateTime mới dựa trên formattedString.
-
 
 // ##########  Constants
 
@@ -252,12 +226,10 @@
 // sunday → const int
 // 7
 
-
 // // UTC là múi giờ 0
 // // toLocal Là múi giờ địa Phương có cộng 7
 // //###### định dạng String toIso8601String()  là định dạng làm việc với backend
-// // HH là định dạng 24h 
-
+// // HH là định dạng 24h
 
 // // Accepted String Patterns:
 // // "2012-02-27"
@@ -273,28 +245,26 @@
 // // "-123450101 00:00:00 Z": in the year -12345.
 // // "2002-02-27T14:00:00-0500": Same as "2002-02-27T19:00:00Z"
 
-
 // //   # chuyển String --> DateTime
 // //   DateTime.parse('String')
 // //   var parsedDate = DateTime.parse('1974-03-20 00:00:00.000');
 
-// //   # chuyển DateTime --> String 
+// //   # chuyển DateTime --> String
 // //   dateFormate = DateFormat("dd-MM-yyyy").format(DateTime.now())
 // //   dateFormate = DateFormat("dd-MM-yyyy").format(DateTime.parse("2022-05-24"))
 
 // //#### https://stackoverflow.com/questions/50758072/date-time-format-in-flutter-dd-mm-yyyy-hhmm
 
-// //parse() là nhận String -> DateTime 
+// //parse() là nhận String -> DateTime
 // // DateTime.parse('1969-07-20 20:18:04Z')   // String -> DateTime (Không gấn lại định dạng)
 // // var inputDate = DateFormat('dd/MM/yyyy HH:mm').parse('31/12/2000 23:59');     //  STring -> DateTime (Có gán lại định dạng)
-
 
 // //format() là nhận DateTime -> String
 // // var outputDate = DateFormat('MM/dd/yyyy hh:mm a').format(DateTime.now());    // DateTime -> String (Có gán lại định dạng )
 // //print(outputDate); // 12/31/2000 11:59 PM <-- MM/dd 12H format
 
 // ######## DateFormat class của thư viện  intl Flutter
-// DateFormat dùng để định dạng và phân tích cú pháp ngày tháng 
+// DateFormat dùng để định dạng và phân tích cú pháp ngày tháng
 // Nó cho phép người dùng chọn từ một tập hợp các định dạng ngày giờ tiêu chuẩn cũng như chỉ định một mẫu tùy chỉnh theo các ngôn ngữ nhất định
 // Các yếu tố ngày khác nhau giữa các ngôn ngữ bao gồm tên tháng, tên tuần, thứ tự trường, v.v. Chúng tôi cũng cho phép người dùng sử dụng bất kỳ mẫu tùy chỉnh nào để phân tích cú pháp hoặc định dạng chuỗi ngày-giờ theo một số ngôn ngữ nhất định.
 // Các yếu tố ngày khác nhau giữa các ngôn ngữ bao gồm tên tháng, tên tuần, trường, đơn hàng, v.v.
@@ -311,7 +281,7 @@
 //  DateFormat.Hm()                  -> 17:08 // force 24 hour time
 
 // ######### Constructors
- 
+
 // DateFormat([String? newPattern, String? locale])
 // Nhận vào 1 String (chứa định dạng Datime mới):  Tạo DateFormat mới, sử dụng định dạng do newPattern chỉ định.
 
@@ -319,20 +289,13 @@
 //  DateFormat('MM/dd/yyyy hh:mm a').parse('31/12/2000 23:59')---> trả ra 1 DateTime có định dạng 'MM/dd/yyyy hh:mm a'
 //  DateFormat('MM/dd/yyyy hh:mm a').format(DateTime.now())   --->  trả ra 1 String có định dạng 'MM/dd/yyyy hh:mm a'
 
-
-// ------- CASE: 
+// ------- CASE:
 //  # 18/10/2022 :  convert  1 string -> DateTime -> String kiểu toIso8601String()  //Định dạng làm việc với backend
 //  nhưng thời gian năm - tháng - ngày - giờ - phút - giây thay đổi
 //         DateTime.parse("31/12/2000 23:59").toIso8601String()
 
 //       "startDate": DateTime.parse("${state.startDay}").toIso8601String(),
 //       "endDate": DateTime(DateTime.parse("${state.startDay}").year, DateTime.parse("${state.startDay}").month, DateTime.parse("${state.startDay}").day, 23, 59, 59).toIso8601String(),
-         
+
 //           startDay: DateTime(DateTime.now().subtract(const Duration(days: 7)).year, DateTime.now().subtract(const Duration(days: 7)).month, DateTime.now().subtract(const Duration(days: 7)).day).toIso8601String(),
 //           endDay:DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day, 23, 59, 59).toIso8601String() ,
-
-
-
-
-
-

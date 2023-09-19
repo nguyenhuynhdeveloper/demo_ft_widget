@@ -1,7 +1,7 @@
-import 'package:demo_ft_widget/view/demo_Column.dart';
-import 'package:demo_ft_widget/view/demo_Container.dart';
-import 'package:demo_ft_widget/view/demo_Row.dart';
-import 'package:demo_ft_widget/view/demo_Scaffold.dart';
+import 'package:demo_ft_widget/widget/demo_Column.dart';
+import 'package:demo_ft_widget/widget/demo_Container.dart';
+import 'package:demo_ft_widget/widget/demo_Row.dart';
+import 'package:demo_ft_widget/widget/demo_Scaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -42,16 +42,20 @@ class _DemoBotomAppBarState extends State<DemoBotomAppBar> {
             IconButton(
               tooltip: 'Search',
               icon: const Icon(Icons.search),
-              onPressed: () {  setState(() {
+              onPressed: () {
+                setState(() {
                   selectedIndex = 2;
-                });},
+                });
+              },
             ),
             IconButton(
               tooltip: 'Favorite',
               icon: const Icon(Icons.favorite),
-              onPressed: () {  setState(() {
+              onPressed: () {
+                setState(() {
                   selectedIndex = 3;
-                });},
+                });
+              },
             ),
           ],
         ),
@@ -63,12 +67,12 @@ class _DemoBotomAppBarState extends State<DemoBotomAppBar> {
 Widget getBody(int selectedIndex) {
   switch (selectedIndex) {
     case 1:
-      return DemoScaffold();  // Trở lại màn hình gốc
+      return DemoScaffold(); // Trở lại màn hình gốc
       break;
     case 2:
       return DemoRow();
       break;
-       case 2:
+    case 2:
       return DemoContainer();
       break;
     default:
